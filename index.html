@@ -17,8 +17,14 @@
 	<script type="text/javascript" src="./js/script.js"></script>
 	<link rel="stylesheet" href="./css/root.css"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
+<script>
+		AOS.init();
+</script>
 <button id="scroll-btn" class="scroll-btn">
 	<span class="glyphicon glyphicon-menu-up"></span>
 </button>
@@ -50,7 +56,7 @@
         <section class="landing-block about-container">
             <h1 class="part-header title">Международная научная конференция по виртуальной и дополненной реальности 2018</h1>
 			<p class="about-text about-date">13 декабря - 14 декабря</p>
-			<button id="participate-btn" class="participate-btn">Участвовать</button>
+			<button id="participate-btn" class="participate-btn title-btn">Участвовать</button>
 		</section>
 		<p class="landing-block base-info">
 				Приглашаем вас принять участие в Международной молодежной научной
@@ -63,14 +69,14 @@
         <section class="partners-container landing-block">
         	<h1 class="part-header" style="text-align: center;">Партнёры</h1>
         	<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12" data-aos="flip-left">
 					<h2 class="partners-type">Ключевые</h2>
 					<div class="list-of-partners partner-container">
 						<img class="partner partner-main" src="./images/partners/rzv.png"/>
 						<img class="partner partner-main" src="./images/partners/f5.svg"/>
 					</div>
 				</div>
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-aos="fade-right" data-aos-duration="2000">
 					<h2 class="partners-type">Основные</h2>
 					<div class="list-of-partners ">
 						<div class="partner partner-additional"></div>
@@ -81,7 +87,7 @@
 						<div class="partner partner-additional"></div>
 					</div>
 				</div>
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-aos="fade-left" data-aos-duration="2000">
 					<h2 class="partners-type">Информационные</h2>
 					<div class="list-of-partners ">
 						<div class="partner partner-additional"></div>
@@ -119,14 +125,14 @@
    		<section class="landing-block">
    			<h1 class="part-header">Программа</h1>
    			<div>
-   				<div class="row event">
+   				<div data-aos="fade-right" class="row event">
    					<div class="event-time col-lg-2 col-md-2 col-sm-12 col-xs-12">10:20 - 10:40</div>
 					<div class="event-info col-lg-10 col-md-10 col-sm-12 col-xs-12">
 						<p class="event-name">Открытие</p>
 						<p class="event-description">Соображения высшего порядка, а также начало повседневной работы по формированию позиции в значительной степени обуславливает создание системы обучения кадров, соответствующей насущным потребностям.</p>
 					</div>
    				</div>
-   				<div class="row event">
+   				<div data-aos="fade-right" class="row event">
    					<div class="event-time col-lg-2 col-md-2 col-sm-12 col-xs-12">10:50 - 11:20</div>
 					<div class="event-info col-lg-10 col-md-10 col-sm-12 col-xs-12">
 						<p>Доклад "Количественный рост и сфера нашей активности"</p>
@@ -138,7 +144,7 @@
 		<span class="anchor" id="reports"></span>
    		<section class="landing-block reports-container">
 			<h1 class="part-header">Ключевые доклады</h1>
-			<div class="row report">
+			<div data-aos="fade-right" class="row report">
 				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
 					<img class="col-md-2 img-rounded" src="./images/speakers/V_utochkin.png">
 				</div>
@@ -151,7 +157,7 @@
 					<p class="report-about">На лекции слушатели узнают, что представляет собой виртуальная реальность сегодня, какие вызовы стоят перед разработчиками игр с развитием новых технологий и как они решаются, каковы особенности гейм-дизайна в виртуальной реальности. Отдельное внимание будет уделено тому, как применяются технологии виртуальной реальности в нашей жизни.</p>
 				</div>
 			</div>
-			<div class="row report">
+			<div data-aos="fade-right" class="row report">
 				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
 					<img class="col-md-2 img-rounded" src="./images/speakers/A_guseynova.jpg">
 				</div>
@@ -163,7 +169,7 @@
 					<p class="report-name">Интерактивное образовательное VR-приложение для школьников</p>
 				</div>
 			</div>
-			<div class="row report">
+			<div data-aos="fade-right" class="row report">
 				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
 					<img class="col-md-2 img-rounded" src="./images/speakers/D_gritsan.jpg">
 				</div>
@@ -175,7 +181,7 @@
 					<p class="report-name">Проблемы использования AR/VR в архитектуре</p>
 				</div>
 			</div>
-			<div class="row report">
+			<div data-aos="fade-right" class="row report">
 				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
 					<img class="col-md-2 img-rounded" src="./images/speakers/E_filatova.jpg">
 				</div>
@@ -187,7 +193,7 @@
 					<p class="report-name">Развитие рынка виртуальной и дополненной реальности, сферы применения технологии</p>
 				</div>
 			</div>
-			<div class="row report">
+			<div data-aos="fade-right" class="row report">
 				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
 					<img class="col-md-2 img-rounded" src="./images/speakers/none.png">
 				</div>
