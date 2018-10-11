@@ -1,0 +1,56 @@
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+        font-size: 1.2rem !important;
+    }
+}
+
+.logo {
+    width: 180px;
+}
+
+.navbar-header {
+    min-height: 60px !important
+}
+
+.navbar-nav li a:hover, .navbar-nav > .active > a {
+    color: $main-clr!important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+
+
+.nav-item {
+    padding-top: 20px !important;
+    color: $main-clr !important;
+    font-size: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    margin: 0 2px;
+    transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background-color: $main-clr;
+        transform-origin: right top;
+        transform: scale(0, 1);
+        transition: color 0.1s,transform 0.2s ease-out;
+    }    
+}
+
+.active>.nav-item::before{
+    transform: scale(1, 1);
+}
+
+.nav-item:hover::before, a:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+

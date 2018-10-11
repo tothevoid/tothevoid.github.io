@@ -1,0 +1,42 @@
+.reports-container{
+    background-color:$scnd-clr;
+    color:$thrd-clr;
+}
+
+.report {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.speaker{
+    font-size: 0.9rem;
+}
+
+.speaker-about{
+    font-weight: 100;
+    font-size: 0.7rem;
+}
+
+.report-name{
+    //margin-top: 1rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.report-about{
+    font-size: 0.75rem;
+}
+
+.img-rounded{
+    border-radius: 75% !important; 
+    border: 0px solid #e7e7e7; 
+    box-shadow: 0 0 7px #666; 
+    height: auto;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+    padding: 0;
+}
+ 

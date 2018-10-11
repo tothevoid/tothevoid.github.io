@@ -1,0 +1,33 @@
+$main:#ffffff;
+$second: #0462A9;
+
+.participation-part{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color:$second;
+    color:$main;
+}
+
+.requirements{
+    list-style-type: square;
+}
+
+.button-link{
+    margin-bottom: 5px;
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+    display: block;
+    float: right;
+    font-weight: bold;
+    border-radius: 3px;
+    background: transparent;
+    border: solid 1px $main;
+    color: $main;
+    &:focus, &:active, &:hover{
+        background: $main;
+        border: solid 1px $second;
+        color: $second;
+        transition: all 0.5s ;
+    }
+}

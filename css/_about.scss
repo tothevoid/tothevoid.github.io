@@ -1,0 +1,62 @@
+.about-container{
+    background-image: url(../images/back.jpg);  
+    width: 100%;
+    height: 100vh;
+    background-position: 30% 70%;
+    background-repeat: no-repeat; 
+}
+
+@media (min-height: 1200px), (min-width: 1921px){
+    .about-container{
+        background-size: 100% 100%;
+    }
+}
+
+.title{
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    color: $thrd-clr;
+    margin-top: 0.5rem;
+    font-size:1.5rem;
+}
+
+.about-text {
+    width: 90%;
+    text-align:left;
+    color:$thrd-clr;
+}
+
+.about-date{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.participate-btn{
+    margin-top:1.5rem;
+    height: 60px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1rem;
+    display: block;
+    border-radius: 0.2rem;
+    background: transparent;
+    border: solid 2px $thrd-clr;
+    color: $thrd-clr;
+   
+    &:focus, &:active, &:hover{
+        background:  $main-clr;
+        color: $thrd-clr;
+        border: solid 2px $main-clr;
+        transition: all 0.5s;
+    }
+}
+
+.base-info{
+    font-size: 1rem;
+    color: $thrd-clr;
+    text-align: center;
+    background-color: $main-clr;
+}
