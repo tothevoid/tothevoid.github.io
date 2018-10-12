@@ -72,30 +72,25 @@
 				<div class="col-md-12" data-aos="flip-left">
 					<h2 class="partners-type">Ключевые</h2>
 					<div class="list-of-partners partner-container">
-						<img class="partner partner-main" src="./images/partners/rzv.png"/>
-						<img class="partner partner-main" src="./images/partners/f5.svg"/>
+                    {{#partners_main}}
+						<img class="partner partner-main" src="./images/partners/{{src}}"/>
+					{{/partners_main}}
                     </div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-aos="fade-right" data-aos-duration="2000">
 					<h2 class="partners-type">Основные</h2>
 					<div class="list-of-partners ">
+                        {{#partners_left}}
 						<div class="partner partner-additional"></div>
-						<div class="partner partner-additional"></div>
-						<div class="partner partner-additional"></div>
-						<div class="partner partner-additional"></div>
-						<div class="partner partner-additional"></div>
-						<div class="partner partner-additional"></div>
+                        {{/partners_left}}
                     </div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" data-aos="fade-left" data-aos-duration="2000">
 					<h2 class="partners-type">Информационные</h2>
 					<div class="list-of-partners ">
+						{{#partners_right}}
 						<div class="partner partner-additional"></div>
-						<div class="partner partner-additional"></div>
-						<div class="partner partner-additional"></div>
-						<div class="partner partner-additional"></div>
-						<div class="partner partner-additional"></div>
-						<div class="partner partner-additional"></div>
+                        {{/partners_right}}
 					</div>
 				</div>	
         	</div>
@@ -106,10 +101,9 @@
 			<p>Для участия необходимо:</p>
 			<div class="row">
 				<ul class="requirements col-lg-8 col-md-8 col-sm-12 col-xs-12">
-					<li>Возраст старшее...</li>
-					<li>Знания в области...</li>
-					<li>Наличие...</li>
-					<li>Что-то еще...</li>
+                    {{#requirments}}
+					<li>{{name}}</li>
+                    {{/requirments}}
 				</ul>
 				<div class="feedback-buttons col-lg-4 col-md-4 col-sm-12 col-xs-12">
 					<a class="col-lg-12 col-md-12 col-sm-5 col-xs-12" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSc3373yw6KoT-8Dev1DCmUHDvYX_Rt6XyV9ko8iAbtzlLxN7g/viewform">
@@ -125,90 +119,35 @@
    		<section class="landing-block">
    			<h1 class="part-header">Программа</h1>
    			<div>
+               {{#events}}
    				<div data-aos="fade-right" class="row event">
-   					<div class="event-time col-lg-2 col-md-2 col-sm-12 col-xs-12">10:20 - 10:40</div>
+   					<div class="event-time col-lg-2 col-md-2 col-sm-12 col-xs-12">{{time}}</div>
 					<div class="event-info col-lg-10 col-md-10 col-sm-12 col-xs-12">
-						<p class="event-name">Открытие</p>
-						<p class="event-description">Соображения высшего порядка, а также начало повседневной работы по формированию позиции в значительной степени обуславливает создание системы обучения кадров, соответствующей насущным потребностям.</p>
+						<p class="event-name">{{name}}</p>
+						<p class="event-description">{{descr}}</p>
 					</div>
    				</div>
-   				<div data-aos="fade-right" class="row event">
-   					<div class="event-time col-lg-2 col-md-2 col-sm-12 col-xs-12">10:50 - 11:20</div>
-					<div class="event-info col-lg-10 col-md-10 col-sm-12 col-xs-12">
-						<p class="event-name">Доклад &#39;Количественный рост и сфера нашей активности&#39;</p>
-						<p class="event-description">Не следует, однако, забывать о том, что постоянный количественный рост и сфера нашей активности напрямую зависит от существующих финансовых и административных условий. Повседневная практика показывает, что начало повседневной работы по формированию позиции обеспечивает актуальность направлений прогрессивного развития! Соображения высшего</p>
-					</div>
-   				</div>
+                {{/events}}
    			</div>
 		</section>
 		<span class="anchor" id="reports"></span>
    		<section class="landing-block reports-container">
 			<h1 class="part-header">Ключевые доклады</h1>
+			{{#reports}}
 			<div data-aos="fade-right" class="row report">
 				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-					<img class="col-md-2 img-rounded" src="./images/speakers/V_utochkin.png">
+					<img class="col-md-2 img-rounded" src="./images/speakers/{{img}}">
 				</div>
 				<div class="col-lg-10 col-md-10 col-sm-8 col-xs-8">
-					<p class="speaker">Вячеслав Уточкин</p>
-					<p class="speaker-about">Высшая школа бизнес-информатики НИУ ВШЭ, Москва</p>
+					<p class="speaker">{{speaker}}</p>
+					<p class="speaker-about">{{about_speaker}}</p>
 				</div>
 				<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-					<p class="report-name">Виртуальная реальность в игровой индустрии</p>
-					<p class="report-about">На лекции слушатели узнают, что представляет собой виртуальная реальность сегодня, какие вызовы стоят перед разработчиками игр с развитием новых технологий и как они решаются, каковы особенности гейм-дизайна в виртуальной реальности. Отдельное внимание будет уделено тому, как применяются технологии виртуальной реальности в нашей жизни.</p>
+					<p class="report-name">{{report_name}}</p>
+					<p class="report-about">{{report_about}}</p>
 				</div>
 			</div>
-			<div data-aos="fade-right" class="row report">
-				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-					<img class="col-md-2 img-rounded" src="./images/speakers/A_guseynova.jpg">
-				</div>
-				<div class="col-lg-10 col-md-10 col-sm-8 col-xs-8">
-					<p class="speaker">Анастасия Гусейнова</p>
-					<p class="speaker-about">Белорусский Государственный Университет, Минск</p>
-				</div>
-				<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-					<p class="report-name">Интерактивное образовательное VR-приложение для школьников</p>
-					<p class="report-about"></p>
-				</div>
-			</div>
-			<div data-aos="fade-right" class="row report">
-				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-					<img class="col-md-2 img-rounded" src="./images/speakers/D_gritsan.jpg">
-				</div>
-				<div class="col-lg-10 col-md-10 col-sm-8 col-xs-8">
-					<p class="speaker">Дмитрий Грицан</p>
-					<p class="speaker-about">Program Manager в компании Microsoft</p>
-				</div>
-				<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-					<p class="report-name">Проблемы использования AR&#x2F;VR в архитектуре</p>
-					<p class="report-about"></p>
-				</div>
-			</div>
-			<div data-aos="fade-right" class="row report">
-				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-					<img class="col-md-2 img-rounded" src="./images/speakers/E_filatova.jpg">
-				</div>
-				<div class="col-lg-10 col-md-10 col-sm-8 col-xs-8">
-					<p class="speaker">Екатерина Филатова</p>
-					<p class="speaker-about">Ассоциация дополненной и виртуальной реальности (AVRA)</p>
-				</div>
-				<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-					<p class="report-name">Развитие рынка виртуальной и дополненной реальности, сферы применения технологии</p>
-					<p class="report-about"></p>
-				</div>
-			</div>
-			<div data-aos="fade-right" class="row report">
-				<div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
-					<img class="col-md-2 img-rounded" src="./images/speakers/none.png">
-				</div>
-				<div class="col-lg-10 col-md-10 col-sm-8 col-xs-8">
-					<p class="speaker">Вячеслав Тимченко</p>
-					<p class="speaker-about">Санкт-Петербургский союз ученых, к.т.н.</p>
-				</div>
-				<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-					<p class="report-name">Некоторые аспекты перспектив применения виртуальной реальности на интеллектуальной основе систем имитационного моделирования в процессе повышения квалификации специалистов транспортного вуза</p>
-					<p class="report-about"></p>
-				</div>
-			</div>
+			{{/reports}}
 		</section>
 		<span class="anchor" id="place"></span>
 		<section class="landing-block">
@@ -223,15 +162,11 @@
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			<ul class="basic-info">
 				<span>Адрес оргкомитета</span>
+				{{#basic_info}}
 				<li>
-					<p>г. Архангельск, наб. Северной Двины, д. 2, к. 1, ауд. 212</p>
+					<p>{{text}}</p>
 				</li>
-				<li>
-					<p>+7 (8182) 21-61-00</p>
-				</li>
-				<li>
-					<p>m.korzina@narfu.ru</p>
-				</li>
+				{{/basic_info}}
 			</ul>
 		</div>
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -255,21 +190,13 @@
 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 			<ul class="social">
 				<span>Социальные сети</span>
+				{{#socials}}
 				<li>
-					<a target="_blank" href="https:&#x2F;&#x2F;vk.com&#x2F;safuarh">
-						<img src="./images/socials/vk.svg" class="icon"/>
+					<a target="_blank" href="{{href}}">
+						<img src="./images/socials/{{src}}" class="icon"/>
 					</a>
 				</li>
-				<li>
-					<a target="_blank" href="https:&#x2F;&#x2F;www.facebook.com&#x2F;pg&#x2F;NArFU.International.Office&#x2F;posts&#x2F;">
-						<img src="./images/socials/facebook.svg" class="icon"/>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https:&#x2F;&#x2F;www.instagram.com&#x2F;narfuniversity&#x2F;">
-						<img src="./images/socials/instagram.svg" class="icon"/>
-					</a>
-				</li>
+				{{/socials}}
 			</ul>
 		</div>
 	</div>
