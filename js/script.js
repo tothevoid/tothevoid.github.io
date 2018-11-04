@@ -23,7 +23,6 @@ function participate(){
 }
 
 $(function (){
-
     $('body').scrollspy({target: ".navbar", offset: 50});
     window.onscroll = function() {scrollCheck()};
     $('.nav-item').click(scrollAnimate);

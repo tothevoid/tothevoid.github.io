@@ -7,16 +7,16 @@
 	<title>Конференция AR/VR</title>
 	<link rel="icon" href="./images/flaticon.png">
 	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
-	<link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.css"/>
+	{{! <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.css"/>
     <script type="text/javascript" src="./lib/jquery/dist/jquery.js"></script>
-	<script type="text/javascript" src="./lib/bootstrap/dist/js/bootstrap.js"></script>
+	<script type="text/javascript" src="./lib/bootstrap/dist/js/bootstrap.js"></script> }}
+
 	<script type="text/javascript" src="./js/script.js"></script>
 	<link rel="stylesheet" href="./css/root.css"/>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -118,9 +118,9 @@
    			<h1 class="part-header">Программа</h1>
    			<div>
                {{#events}}
-   				<div data-aos="fade-right" class="row event">
-   					<div class="event-time col-lg-2 col-md-2 col-sm-12 col-xs-12">{{time}}</div>
-					<div class="event-info col-lg-10 col-md-10 col-sm-12 col-xs-12">
+   				<div data-aos="fade-right" class="event">
+					<div class="event-info">
+						<span class="event-time">{{time}}</span>
 						<p class="event-name">{{name}}</p>
 						<p class="event-description">{{descr}}</p>
 					</div>

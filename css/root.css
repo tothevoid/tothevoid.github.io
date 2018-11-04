@@ -15,8 +15,8 @@
         flex-flow: wrap;
   }
   .requirements .requirement {
-    width: 60vw;
-    height: 60vw;
+    width: 55vw;
+    height: 55vw;
   }
 }
 
@@ -36,8 +36,8 @@
         flex-flow: wrap;
   }
   .requirements .requirement {
-    width: 80vw;
-    height: 80vw;
+    width: 55vw;
+    height: 55vw;
   }
 }
 
@@ -78,8 +78,8 @@
         flex-flow: nowrap;
   }
   .requirements .requirement {
-    width: 10vw;
-    height: 10vw;
+    width: 15vw;
+    height: 15vw;
   }
 }
 
@@ -135,7 +135,7 @@ main {
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  right: .5rem;
   z-index: 99;
   height: 50px;
   font-size: 1.5rem;
@@ -344,6 +344,16 @@ main {
   background-image: none !important;
 }
 
+.navbar-collapse ul li a {
+  padding-left: 10%;
+  text-align: center;
+}
+
+.navbar-collapse ul.nav li.active a.nav-item::before {
+  margin-left: 10%;
+  width: 80%;
+}
+
 .nav-item {
   padding-top: 20px !important;
   color: #0462A9 !important;
@@ -427,8 +437,8 @@ main {
 }
 
 .requirements .requirement:hover .link {
-  -webkit-text-decoration: underline solid white;
-          text-decoration: underline solid white;
+  -webkit-text-decoration: underline dashed white;
+          text-decoration: underline dashed white;
 }
 
 .requirements .requirement:hover::after {
@@ -469,8 +479,8 @@ main {
 }
 
 p.link {
-  -webkit-text-decoration: underline dashed white;
-          text-decoration: underline dashed white;
+  -webkit-text-decoration: underline solid white;
+          text-decoration: underline solid white;
 }
 
 @media (max-width: 800px) {
@@ -551,13 +561,15 @@ p.link {
 }
 
 .event {
-  margin-bottom: 10px;
+  width: 100%;
+  padding-left: 1.5rem;
 }
 
 .event-time {
-  text-align: left;
-  margin-bottom: 5px;
   font-size: 1.1rem;
+  background: #0462A9;
+  color: white;
+  padding: 5px;
 }
 
 .event-description {
@@ -565,7 +577,38 @@ p.link {
 }
 
 .event-name {
+  margin-top: .5rem;
   font-size: 1.1rem;
+}
+
+.event-info {
+  padding-bottom: 1rem;
+}
+
+.event-info p {
+  margin-bottom: 0;
+}
+
+.event-info::before {
+  content: '';
+  height: 100%;
+  width: 3px;
+  position: absolute;
+  left: -3px;
+  display: block;
+  border-right: 5px dashed #0462A9;
+}
+
+.event-info::after {
+  content: '';
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  border: 5px solid #0462A9;
+  background: white;
+  position: absolute;
+  left: -0.75rem;
+  top: 0;
 }
 
 .reports-container {

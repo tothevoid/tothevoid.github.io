@@ -18,7 +18,17 @@
     background-image: none !important;
 }
 
+.navbar-collapse ul li a{
+    padding-left: 10%;
+    text-align: center;
+}
 
+.navbar-collapse ul.nav li.active a.nav-item{
+    &::before{
+        margin-left: 10%;
+        width: 80%;   
+    }
+}
 
 .nav-item {
     padding-top: 20px !important;
