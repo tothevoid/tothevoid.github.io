@@ -97,22 +97,20 @@
 		</section>
 		<span class="anchor" id="participation"></span>
    		<section  class="participation-part landing-block">
-			<h1 class="part-header">Как принять участие</h1>
-			<p>Для участия необходимо:</p>
-			<div class="row">
-				<ul class="requirements col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                    {{#requirments}}
-					<li>{{name}}</li>
-                    {{/requirments}}
-				</ul>
-				<div class="feedback-buttons col-lg-4 col-md-4 col-sm-12 col-xs-12">
-					<a class="col-lg-12 col-md-12 col-sm-5 col-xs-12" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSc3373yw6KoT-8Dev1DCmUHDvYX_Rt6XyV9ko8iAbtzlLxN7g/viewform">
-						<button class="button-link">Регистрация</button>
-					</a>
-					<a class="col-lg-12 col-md-12 col-sm-5 col-xs-12" target="_blank" href="./docs/letter.pdf">
-						<button class="button-link">Информационное письмо</button>
-					</a>
-				</div>
+			<h1 style="text-align:center" class="part-header">Для участия необходимо</h1>
+			<div class="requirements">
+				{{#participate_info}}
+				<a class="requirement cursor-def">
+					<img src="{{src}}"/>
+					<p>{{text}}</p>
+				</a>
+				{{/participate_info}}
+				{{#participate_link}}
+				<a href="{{href}}" target="_blank" class="requirement">
+					<img src="{{src}}"/>
+					<p class="link">{{text}}</p>
+				</a>
+				{{/participate_link}}
 			</div>
 		</section>
 		<span class="anchor" id="events"></span>

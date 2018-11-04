@@ -9,11 +9,31 @@ $frth-clr: #000000;
     html{
         font-size: 18px;
     }
+
+    .requirements{
+        flex-direction: column;
+        justify-content: center;
+        flex-flow: wrap;
+        .requirement{
+            width: 60vw;
+            height: 60vw;
+        }
+    }
   }
 
 @media (min-width: 576px) and (max-width: 767px) {
     html{
         font-size: 20px;
+    }
+
+    .requirements{
+        flex-direction: column;
+        justify-content: center;
+        flex-flow: wrap;
+        .requirement{
+            width: 80vw;
+            height: 80vw;
+        }
     }
 }
    
@@ -21,17 +41,46 @@ $frth-clr: #000000;
     html{
         font-size: 24px;
     }
+
+    .requirements{
+        flex-direction: row;
+        justify-content: space-between;
+        flex-flow: wrap;
+        .requirement{
+            width: 35vw;
+            height: 35vw;
+        }
+    }
+
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
     html{
         font-size: 28px;
     }
+    .requirements{
+        flex-direction: row;
+        justify-content: space-between;
+        flex-flow: nowrap;
+        .requirement{
+            width: 10vw;
+            height: 10vw;
+        }
+    }
 }
 
 @media (min-width: 1200px) { 
     html{
         font-size: 32px;
+    }
+    .requirements{
+        flex-direction: row;
+        justify-content: space-between;
+        flex-flow: nowrap;
+        .requirement{
+            width: 15vw;
+            height: 15vw;
+        }
     }
 }
 

@@ -1,5 +1,6 @@
 $main:#ffffff;
 $second: #0462A9;
+$width: 100%;
 
 .participation-part{
     padding-top: 1rem;
@@ -9,25 +10,59 @@ $second: #0462A9;
 }
 
 .requirements{
-    list-style-type: square;
-}
-
-.button-link{
-    margin-bottom: 5px;
-    height: 60px;
+    user-select: none;
+    display: flex;
+    align-items: center;
     width: 100%;
-    font-size: 20px;
-    display: block;
-    float: right;
-    font-weight: bold;
-    border-radius: 3px;
-    background: transparent;
-    border: solid 1px $main;
-    color: $main;
-    &:focus, &:active, &:hover{
-        background: $main;
-        border: solid 1px $second;
-        color: $second;
-        transition: all 0.5s ;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    .requirement{
+        margin: 1rem 0;
+        display: block;
+        transition: 2s;
+        text-decoration: none;
+        color: $thrd-clr;
+        cursor: pointer;
+        &:hover{
+            transform: scale(.9);
+            .link{
+                text-decoration: underline solid white;
+            }
+        }
+        
+        &:hover::after{
+            width: 0%;
+        }
+        img{
+            height: 80%;
+            width: $width;
+            fill: $thrd-clr;
+            display: block;
+        }
+        p{
+            height: 20%;
+            text-align: center;
+            font-size: 1.1rem;
+            &::before{
+                content: "";
+                display: inline-block;
+                background: $thrd-clr;
+                width: 100%;
+                border-radius: 10px;
+                height: 10px;
+                transition: 2s;
+            }
+            a{
+                text-decoration: #ffffff;
+            }
+        }
     }
 }
+
+.cursor-def{
+    cursor: default !important;
+}
+
+p.link{
+    text-decoration: underline dashed white;
+} 
